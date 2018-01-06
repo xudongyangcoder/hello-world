@@ -1,0 +1,51 @@
+GitHub 10分钟快速入门！
+官方原文地址：https://guides.github.com/activities/hello-world/
+本篇文章是对原文的精简，只提取了操作步骤，需了解详细内容请查看原文。
+What is GitHub?
+GitHub是一个代码托管平台，用来版本控制和协作。它可以让你和其他人在任何地方共同开展项目。 
+
+你将学习的内容有：
+-创建和使用一个仓库
+-开始和管理一个新分子
+-对一个文件做一些修改，然后把它们提交到GitHub上
+-打开并且合并一个pull request
+
+第一步-创建一个仓库
+创建一个新仓库的步骤：
+1.在右上角，挨着你头像的地方，点击+，然后选择New repository。
+2.给你的仓库起名字。
+3.填写一个简短的描述。
+4.选中Initialize this repository with a README。
+5.点击Create repository。
+
+第二步-创建一个分支
+创建一个新分支的步骤：
+1.进入你新创建的仓库。
+2.在文件列表的上面有个branch: master的下拉菜单，点击它。
+3.输入分支的名字。
+4.点击蓝色的Create branch按钮
+
+第三步-对文件做一些修改并提交
+步骤：
+1.点击README.md文件。
+2.在文件视图的右上角，点击铅笔的图标来进行编辑。
+3.在文件中写入一些东西。
+4.填写提交消息，用来描述你做的修改。
+5.点击Commit changes 按钮。
+
+第四步-打开一个Pull Request
+为刚刚修改的README.md文件打开一个Pull Request的步骤：
+1.在上方点击Pull Request这个选项，然后点击绿色的New pull request按钮。
+2.在Example Comparisons 这一栏下面，选择你创建的分支。
+3.检测你做的修改，确认你想要提交。
+4.点击绿色的Create Pull Request按钮。
+5.给你的pull request填写一个标题和一个对做的修改的简短的描述。
+6.点击Create Pull Request按钮。
+
+第五步-合并你的Pull Request
+在最后一步，你需要把在分支上做的修改合并到你的主分支上，步骤如下：
+1.点击绿色的Merge pull request 按钮。
+2.点击Confirm merge。
+3.当合并成功后，你也可以点击Delete branch 按钮来删除分支。
+
+恭喜你，已经完成了入门教程！
