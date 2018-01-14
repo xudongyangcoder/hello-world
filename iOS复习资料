@@ -1,0 +1,103 @@
+整理一下之前找工作时复习的一些ios方面的知识。
+由于时间关系，比较少，主要是针对面试的。现在记录的也比较简单，后面有时间会不断完善。
+参考链接：https://github.com/ChenYilong/iOSInterviewQuestions
+
+持久化方式？
+plist文件（属性列表）
+preference（偏好设置）
+NSKeyedArchiver（归档）
+SQLite 
+CoreData
+
+沙盒目录结构是怎样的？各自用于那些场景？
+Application：存放程序源文件
+Documents：适合存储重要数据，会自动备份
+Library/Caches: 适合存储体积大，不需要备份的非重要数据。
+Library/Preferences:会自动备份，通常保存应用的设置信息。
+tmp：存放临时文件，不会被备份，随时可能 被清除
+
+category 和 extension 的区别？
+分类有名字，类扩展没有名字，是一种特殊的分类
+分类只能扩展方法（属性仅仅是声明，并没真正实现），类扩展可以扩展属性、成员变量和方法
+
+define 和 const常量有什么区别？
+宏不做类型检查，仅仅进行替换，const常量有数据类型，会执行类型检查
+define可以定义表达式，const不行
+const常量只占用一份内存，define不会占用内存
+
+block和weak修饰符的区别？
+__block不管是ARC还是MRC模式下 都 可以使用， 可以 修饰对象， 也可以 修饰基本数据类型
+__weak 只能 在ARC模式下使用， 只能 修饰对象（NSString）， 不能 修饰基本数据类型
+block修饰的对象可以在block中被重新赋值，weak修饰的对象不可以
+
+static关键字的作用？
+static修饰的局部变量，内存只被分配一次，生命周期延长
+static 全局变量只能在当前文件中使用
+static 函数只能在当前文件中使用
+
+堆和栈的区别？
+栈里的内存系统管理，堆里的内存手动管理
+栈空间比较小，堆空间比较大
+栈空间中一般存储基本类型，堆空间一般存放对象
+
+什么情况使用 weak 关键字，相比 assign 有什么不同？
+使用 weak 关键字的情况：
+1.解决循环引用
+2.当不需要强引用的时候
+于assign的不同：
+1.当对象销毁时，weak的指针会自动变成nil，assign的指针不会
+2.weak必须用于对象类型，assign一般用于基本类型
+
+@property 的本质是什么？
+ivar（成员变量） + getter + setter
+
+ivar、getter、setter是如何生成并添加到这个类中的？
+使用“自动合成”( autosynthesis)
+这个过程由编译器在编译阶段执行自动合成，所以编辑器里看不到这些“合成方法”(synthesized method)的源代码
+除了生成getter、setter方法之外，编译器还要自动向类中添加成员变量（在属性名前面加下划线，以此作为实例变量的名字）
+
+@protocol 和 category 中如何使用 @property？
+在protocol中使用property 只会生成 setter和getter 方法声明 ,我们使用属性的目的,是希望遵守我协议的对象能实现该属性
+category 使用 @property也是 只会生成 setter和getter 方法声明 ,如果我们真的需要给category增加属性的实现,需要借助于运行时的两个函数
+
+@property后面可以有哪些修饰符？
+atomic，nonatomic
+readwrite(读写)、readooly (只读)
+assign、strong、 weak、unsafe_unretained、copy
+getter=、setter=
+nonnull,null_resettable,nullable
+
+@synthesize 和 @dynamic分别有什么作用？
+@synthesize的语义是如果你没有手动实现setter方法和getter方法，那么编译器会 自动 为你加上这两个方法
+@dynamic告诉编译器：属性的setter与getter方法由 用户自己实现 ，不自动生成（当然对于readonly的属性只需提供getter即可）
+
+@synthesize合成实例变量的规则是什么？
+如果 指定 了成员变量的名称,会生成一个 指定 的名称的成员变量
+如果这个成员已经存在了就不再生成了
+
+在有了自动合成属性实例变量之后，@synthesize还有哪些使用场景？
+首先的搞清楚什么情况下 不会 autosynthesis（自动合成）：
+同时重写了setter和getter时
+重写了只读属性的getter时
+使用了@dynamic时
+在 @protocol 中定义的所有属性
+在 category 中定义的所有属性
+重载的属性，当你在子类中重载了父类中的属性， 必须  使用@synthesize来手动合成ivar
+
+应用场景：
+1.当你同时重写了setter和getter时，系统就不会生成ivar）。这时候有两种选择：
+手动创建ivar；
+使用@synthesize foo = _foo;，关联@property与ivar
+2.可以用来修改成员变量名，一般 不建议 这么做，建议使用系统自动生成的成员变量
+
+怎么用 copy 关键字？
+1.NSString、NSArray、NSDictionary等等经常使用copy关键字，
+是因为他们有对应的 可变类型 ：NSMutableString、NSMutableArray、NSMutableDictionary，
+为确保对象中的属性值不会无意间变动，应该在设置新属性值时拷贝一份，保护其封装性
+2。block也经常使用copy关键字。
+block 使用 copy 是从 MRC 遗留下来的“传统”,在 MRC 中,方法内部的 block 是在栈区的,使用 copy 可以把它放到堆区.
+在ARC中 写不写都行 ：对于 block 使用 copy 还是 strong 效果是一样的，
+但是建议写上copy，因为这样显示告知调用者“编译器会自动对 block 进行了 copy 操作”
+
+如何让自定义类可以用 copy 修饰符？
+需实现NSCopying协议
