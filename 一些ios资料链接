@@ -5,6 +5,7 @@
 手机京东技术团队的微信公众号
 美团点评技术团队：https://tech.meituan.com 
 
+-----------------------------------------------------
 一些知名公司的个人技术分享文章
 滴滴：http://blog.sunnyxx.com/
 滴滴：http://www.starming.com
@@ -12,8 +13,92 @@
 腾讯：http://yulingtianxia.com/
 前网易：http://blog.devtang.com/
 
+-----------------------------------------------------
 中文 iOS/Mac 开发博客列表：https://github.com/tangqiaoboy/iOSBlogCN
 
-个人感觉还不错的
 ObjC 中国-期刊 https://www.objccn.io/issues/ 
 
+iOS翻译-Core Graphics教程1：入门
+http://www.tuicool.com/articles/jaM7zmN
+
+
+iOS-Core-Animation-Advanced-Techniques
+https://github.com/AttackOnDobby/iOS-Core-Animation-Advanced-Techniques
+
+iOS及Mac开源项目和学习资料【超级全面】
+https://www.kancloud.cn/digest/ios-mac-study/84557
+-----------------------------------------------------
+简书
+https://www.jianshu.com/u/2de707c93dc4
+http://www.jianshu.com/u/815d10a4bdce
+http://www.jianshu.com/u/3e55748920d2 
+http://www.jianshu.com/u/16ae66cdf6a0 
+http://www.jianshu.com/u/80e096a6331e 
+http://www.jianshu.com/u/8179cea7ee37
+http://www.jianshu.com/u/256fb15baf75
+http://www.jianshu.com/u/38c473816ca5
+http://www.jianshu.com/u/8179cea7ee37
+http://www.jianshu.com/u/38f5c5bd3849
+http://www.jianshu.com/u/93131dfba96a
+http://www.jianshu.com/u/3dd433cb3ea1
+https://www.jianshu.com/u/93131dfba96a
+http://www.jianshu.com/u/d1ea95326c8c
+-----------------------------------------------------
+github的一些东西
+
+实现 app 版本检查功能。用户打开app之后，进行app的版本更新检查。如果检查到 appstore 上有当前qpp的新版本，则弹出对话框提醒用户下载。
+https://github.com/ArtSabintsev/Harpy
+
+仿照今日头条的图片浏览功能，实现的轻量级图片浏览工具。XLImageViewer
+https://github.com/mengxianliang/XLImageViewer
+
+MVVMReactiveCocoaDemo介绍
+https://github.com/wujunyang/MVVMReactiveCocoaDemo
+
+动画实现的一些常见功能及实现方式，不断更新中....
+https://github.com/wujunyang/facebookPopTest 
+
+各类知识点总结成Demo
+https://github.com/BigShow1949/BigShow1949 
+实现了isEqual和copyWithZone的model基类 
+https://github.com/Mantle/Mantle 
+
+https://github.com/CRAnimation 
+https://github.com/xietao3
+-----------------------------------------------------
+iOS面试相关的
+http://www.jianshu.com/p/5d2163640e26 
+http://www.jianshu.com/p/0a08335221f6 
+http://www.jianshu.com/p/a2435b29875b
+https://wangmeng.gitbooks.io/ios-note/content/interview_1.html
+http://blog.sunnyxx.com/2015/07/04/ios-interview/ 
+http://www.jianshu.com/p/ee15c1cf9c16 
+http://www.jianshu.com/p/8345a79fd572 
+http://www.jianshu.com/p/92653db0e76a 
+http://blog.csdn.net/wang631106979/article/details/73525528 
+-----------------------------------------------------
+其它
+启动图片
+http://www.cnblogs.com/w413133157/p/4337516.html
+
+从零开始完成页面切换形变动画
+http://www.jianshu.com/p/8a569dfd1c4b  
+IOS 30多个iOS常用动画，带详细注释
+http://blog.csdn.net/zhibudefeng/article/details/8691567/
+史上最全的常用iOS的第三方框架
+http://blog.csdn.net/sky_2016/article/details/45502921  
+iOS 高效添加圆角效果实战讲解
+http://www.cocoachina.com/ios/20160301/15486.html 
+
+http://blog.csdn.net/wang631106979/article/category/5957723      
+http://blog.imwcl.com
+http://blog.leichunfeng.com/blog/archives/ 
+http://yulingtianxia.com
+http://blog.sunnyxx.com
+http://blog.csdn.net/u011619283/article/list/1
+http://www.cnblogs.com/kenshincui/
+http://www.cnblogs.com/LynnAIQ/default.html?page=1
+https://casatwy.com/category/blog.html
+http://blog.devtang.com
+http://nshipster.cn
+https://onevcat.com/#blog
